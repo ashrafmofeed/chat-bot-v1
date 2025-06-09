@@ -3,8 +3,7 @@ import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 
 // IMPORTANT: Replace "YOUR_GEMINI_API_KEY" with your actual API key or ensure 
 // process.env.API_KEY is set in your build environment.
-const API_KEY = process.env.API_KEY;
-
+const API_KEY = import.meta.env.GEMINI_API_KEY;
 if (!API_KEY) {
   console.error("Gemini API key is missing. Please set the API_KEY environment variable.");
   // Potentially throw an error or handle this state in the UI
